@@ -1,0 +1,177 @@
+<!-- how browser should understand the html code (this code is 5th HTML code)-->
+<!DOCTYPE html>
+
+<!-- Main html tag -->
+<html lang="en">
+    <!-- Meta info etc -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Example of description of the site">
+        <!--Deprecated-->
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Yaroslav Gorshkov">
+        <title>My first site</title>
+
+        <script src="script.js"></script>
+    </head>
+    <!-- visible part -->
+    <body>
+        <!-- block container -->
+        <header>
+            <h1>My Site</h1>
+            <table>
+                <tr>
+                    <th>Home</th>
+                    <th>Info</th>
+                    <th>About us</th>
+                    <th>contact information</th>
+                </tr>
+            </table>
+        </header>
+        
+        <main>
+            <nav>
+                <ul>
+                    <li><a href="#sectionMain">Main info</a></li>
+                    <li><a href="#sectionCucumbers">Section about cucumbers</a></li>
+                    <li><a href="#sectionImg">Img/video/audio</a></li>
+                    <li><a href="#sectionForm">Form</a></li>
+                </ul>
+            </nav>
+                <h2 id="sectionMain">Main information</h2>
+                <p>Unique and <strong>main </strong>information of this page!!!</p>
+            <div>
+                <!-- inline container (css) -->
+                <span>Text in span</span>
+
+                <!-- paragraph, makes new line -->
+                <p>My text is very <strong>important!</strong></p>
+                <!-- hypertext -->
+                <span>
+                    <a href="https://google.com">Some site</a><br>
+                    <a href="text.txt" target="_blank">My text file</a>
+                </span>
+            </div>
+            <!-- button -->
+            <button type="submit">Button</button><br>
+            <button type="reset">Button</button><br>
+            <button type="button">Button</button><br>
+
+            <button disabled>Disabled button</button>
+            <!-- table -->
+            <table border="3">
+                <thead>
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td colspan="2">longtext</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <section id="sectionCucumbers">
+                <h2>Section about cucumbers</h2>
+                <p>Info...</p>
+            </section>
+
+            <section>
+                <h2>Section about tomatoes</h2>
+                <p>Info...</p>
+            </section>
+
+            <section>
+                <h2>Section about strawberries</h2>
+                <p>Info...</p>
+            </section>
+
+            <article>
+                <p><strong><h2>vegetables are very healthy!!! Thats why: (info)...</h2></strong></p>
+            </article>
+
+            <aside>
+                <h2>Some text</h2>
+                <ol>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ol>
+                <ul>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ul>
+            </aside>
+            
+            <img src="img.jpg" alt="image" height="500" width="500" id="sectionImg">
+            <video width="500" height="500" controls>
+                <source src="video.mov" type="video/mov">
+                <source src="large.mp4" type="video/mp4"> 
+            </video>
+            
+            <audio controls>
+                <source src="audio.mp3">
+            </audio>
+
+            <picture>
+                <source media="(max-width: 600px)" srcset="big-image.png">
+                <source media="(min-width: 601px)" srcset="small-img.jpg">
+                <img src="img.jpg" alt="Alt image">
+            </picture>
+
+            <iframe src="https://developer.mozilla.org/ru/docs/Web/HTML/Element/video" width="500" height="500" title="Google com"></iframe>
+
+            <form id="sectionForm">
+                <label for="name"> Input your name: </label>
+                <input id="name" name="name" type="text">
+
+                <label for="email"> Input your email: </label>
+                <input id="email" name="email" type="email">
+
+                <label for="password"> Input your password: </label>
+                <input id="password" name="password" type="password">
+
+                <label for="children"> Do u have any children?: </label>
+                <input id="children" name="children" type="checkbox">
+
+                <label for="submit"> Submit: </label>
+                <label for="fruits">Choose one fruit:</label>
+                <select id="fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="cherry">Cherry</option>
+                </select>
+
+                <label for="comment">Your comment:</label>
+                <textarea id="comment" name="comment" rows="7" cols="30"></textarea><br>
+
+                <label for="submit"> Submit: </label>
+                <input id="submit" name="submit" type="submit">
+            </form>
+
+            <p>Very <em>important and <b>emotional</b></em> text!!!</p>
+
+            <div>
+                <strong>SVG-object:</strong>
+                <svg>
+                    <circle cx="50", cy="50", r="40" stroke="black" stroke-width="3" fill="red">
+                </svg>
+            </div>
+        </main>
+
+        <footer>
+            <p>Information about us:</p>
+            <ul>
+                <li><b>Tg: ...</b></li>
+                <li><b>Gmail: ...</b></li>
+                <li><b>viber: ...</b></li>
+            </ul>
+        </footer>
+    </body>
+</html>
