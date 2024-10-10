@@ -14,6 +14,23 @@
         <title>My first site</title>
 
         <script src="script.js"></script>
+
+        <style>
+            p::before {
+                content: "→ ";
+                color: rgb(200, 61, 61);
+            }
+            
+            p::after {
+                content: " ←";
+                color: rgb(0, 90, 0);
+            }
+    
+            p::first-line {
+                font-size: 2em;
+                color: rgb(232, 0, 182);
+            }
+        </style>
     </head>
     <!-- visible part -->
     <body>
@@ -153,7 +170,49 @@
 
                 <label for="submit"> Submit: </label>
                 <input id="submit" name="submit" type="submit">
+            </form><br><br><br><br><br><br>
+
+            <strong>Now I am testing html-forms!!!</strong>
+            <form action="/submit-form" method="post">
+                <label for="textInput">Input your text:</label>
+                <input 
+                    id="textInput"
+                    name="text"
+                    type="text"
+                    value="some text ha-ha"
+                    placeholder="Input some text"
+                    required>
+                <label for="">Email:</label>
+                <input id="email" name="email" type="email" 
+                    value="lol@gmail.com" placeholder="input your email PLEASE" required>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password"
+                placeholder="input your PASSWORD!!!" required>
+                <label for="tel">Your telephone number</label>
+                <input id="tel" name="tel" type="tel"
+                placeholder="input telephone number yo">
+                Your SEX:
+                <label for="male">MALE </label>
+                <input id="male" name="sex" type="radio" value="male"> 
+                <label for="female">FEMALE </label>
+                <input id="female" name="sex" type="radio" value="female">
+                Choose one vegetable:
+                <label for="cherry">Cherry:</label>
+                <input id="cherry" name="berries" type="checkbox" value="cherry">
+                <label for="melon">Melon:</label>
+                <input id="melon" name="berries" type="checkbox" value="melon">
+                <label for="pear">Pear:</label>
+                <input id="pear" name="berries" type="checkbox" value="pear">
+                <label for="strawberries">Strawberries:</label>
+                <input id="strawberries" name="berries" type="checkbox" value="strawberries">
+                <input type="color">
+
+                <label for="submitButton">Submit:</label>
+                <button id="submitButton" type="submit">SUB</button>
+                <label for="resetButton">Reset:</label>
+                <button id="submitButton" type="reset">RES</button>
             </form>
+            <br><br><br><br><br>
 
             <p>Very <em>important and <b>emotional</b></em> text!!!</p>
 
