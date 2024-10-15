@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <!-- Main html tag -->
-<html lang="en">
+<html lang="en" class="html-tag">
     <!-- Meta info etc -->
     <head>
         <meta charset="UTF-8">
@@ -15,32 +15,14 @@
 
         <script src="script.js"></script>
 
-        <style>
-            p::before {
-                content: "→ ";
-                color: rgb(200, 61, 61);
-            }
-            
-            p::after {
-                content: " ←";
-                color: rgb(0, 90, 0);
-            }
-    
-            p::first-line {
-                font-size: 2em;
-                color: rgb(232, 0, 182);
-            }
-
-            p::selection {
-                background: cyan;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <!-- visible part -->
     <body>
+        <span>SPAN1111111111</span>
         <!-- block container -->
         <header>
-            <h1>My Site</h1>
+            <h1 style="color: red; font-size: 48px;">My Site</h1>
             <table>
                 <tr>
                     <th>Home</th>
@@ -50,11 +32,14 @@
                 </tr>
             </table>
         </header>
-        
+        <span>SPAN2222222222</span> 
+        <span>SPAN3333333333</span>
+        <span>SPAN4444444444</span>
         <main>
+            <span>SPAN1111111111</span>
             <nav>
                 <ul>
-                    <li><a href="#sectionMain">Main info</a></li>
+                    <li class=""><a href="#sectionMain">Main info</a></li>
                     <li><a href="#sectionCucumbers">Section about cucumbers</a></li>
                     <li><a href="#sectionImg">Img/video/audio</a></li>
                     <li><a href="#sectionForm">Form</a></li>
@@ -72,12 +57,51 @@
                 <span>
                     <a href="https://google.com">Some site</a><br>
                     <a href="text.txt" target="_blank">My text file</a>
+                    <a href="text.txt" target="_self">My text file2</a>
                 </span>
+                <p>
+                    <span>SPAN1</span>
+                    <span>SPAN2</span>
+                    <span>SPAN3</span>
+                    <span>SPAN4</span>
+                </p>
             </div>
+            <span>SPAN2222222222</span> 
             <!-- button -->
-            <button type="submit">Button</button><br>
-            <button type="reset">Button</button><br>
-            <button type="button">Button</button><br>
+            <button class="button button--primary" type="submit">Button1</button><br>
+            <button class="button" type="reset">Button</button><br>
+            <button class="button" type="button">Button</button><br>
+
+            <h2 class="css-test-header">TESTING CSS ON DIV TAGS AND MORE:</h2>
+            <div class="class1 class2">Text for 1 div</div>
+            <div class="class1">Text for 2 div</div>
+            <div class="class2">Text for 3 div</div>
+
+            <div class="class3">
+                <div class="class4">TEXT div class 4 in div class 3</div>
+            </div>
+            <span>SPAN3333333333</span>
+            <div class="class3">TEXT div class 3</div>
+            <div class="class4">TEXT div class 4</div>
+
+            <div id="first-id-div">First ID div!!!</div>
+
+            <a href="" class="certain-element-class">AAAAAAAAA</a>
+            <p class="certain-element-class">PPPPPPPP</p>
+            <span class="certain-element-class"><span>SPAN4444444444</span></span><br>
+
+            <div>
+                <span>SPAN1</span>
+                <span>SPAN2</span>
+                <span>SPAN3</span>
+                <span>SPAN4</span>
+            </div>
+
+            <span>TEST</span>
+            <b>AAAAA</b>
+
+            <span><b>BIGTEXT</b></span>
+
 
             <button disabled>Disabled button</button>
             <!-- table -->
@@ -220,14 +244,31 @@
 
             <p>Very <em>important and <b>emotional</b></em> text!!!</p>
 
-            <div>
-                <strong>SVG-object:</strong>
+            <div class="test-px-div">
+                TEXT FROM DIV (MUST BE 16px)
+                <strong class="test-px-strong">SVG-object:</strong>
                 <svg>
                     <circle cx="50", cy="50", r="40" stroke="black" stroke-width="3" fill="red">
                 </svg>
             </div>
+            <section class="text-test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur 
+                laborum similique magnam necessitatibus, quis exercitationem blanditiis
+                 cupiditate cumque, amet illo perspiciatis quia in quae adipisci sequi a
+                  facilis voluptatibus voluptatem consectetur ipsam. Distinctio commodi
+                   velit ducimus maiores iste aut reprehenderit, similique id. Non 
+                   u
+                   l
+                   l
+                   am
+                   recusandae reprehenderit dolore illo accusantium totam.</section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
         </main>
-
+        <h2 class="big-text">TESTING BOX MODEL:</h2>
+        <div class="test-box">BOX</div>
+        <div><span>SPAN</span></div>
         <footer>
             <p>Information about us:</p>
             <ul>

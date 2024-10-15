@@ -1,0 +1,141 @@
+p::before {
+    content: "→ ";
+    color: rgb(200, 61, 61);
+}
+
+p::after {
+    content: " ←";
+    color: rgb(0, 90, 0);
+}
+
+p::first-line {
+    font-size: 2em;
+    color: rgb(232, 0, 182);
+}
+
+p::selection {
+    background: cyan;
+}
+
+section {
+    color: rgb(37, 215, 21);
+    font-size: 20px;
+}
+
+.button {
+    background-color: blue;
+    font-size: 33px;
+}
+
+.button--primary {
+    background-color: green;
+}
+
+.class1 {
+    background-color: rgb(70, 124, 223);
+    font-size: 33px;
+}
+
+.class2 {
+    background-color: rgb(21, 38, 71);
+    font-size: 13px;
+}
+
+.css-test-header {
+    font-size: 70px;
+}
+
+.class1.class2 {
+    background-color: rgb(195, 181, 33);
+    font-size: 23px;
+}
+
+.class3 .class4 {
+    background-color: rgb(37, 35, 19);
+    font-size: 30px;
+}
+
+#first-id-div {
+    background-color: rgb(148, 144, 118);
+    font-size: 50px;
+}
+
+
+* {
+    margin: 0px;
+    background-color: rgba(100, 200, 250, 0.2);
+    /* background-color: hsla(214, 48%, 67%, 0.721); */
+}
+
+a.certain-element-class {
+    color: aquamarine;
+}
+
+br {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+b,span {
+    color:rgb(49, 190, 49);
+}
+
+span b {
+    color:rgb(49, 190, 49);
+    font-size: 100px;
+}
+
+[target="_blank"] {
+    font-size: 80px;
+}
+
+span:nth-of-type(2n+1) {
+    color: bisque;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.big-text {
+    font-size: 100px;
+}
+
+.text-test {
+    text-align: justify;
+    text-decoration: overline red;
+    text-transform: uppercase;
+    text-indent: 100px;
+    text-shadow: #FC0 1px 0 10px;
+    text-overflow: ellipsis;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps slashed-zero;
+    font-stretch: expanded;
+}
+
+.test-box {
+    font-size: 72px;
+    /* box-sizing: content-box; - по умолчанию, width/height = padding+border+content */
+    box-sizing: border-box;
+    width: 100vmax; /* width of content area */
+    height: 100vmin; /* height of content area */
+
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    /*padding = со всех сторон сразу*/
+
+    border: 2px solid red;
+    /*border = со всех сторон сразу*/
+
+    margin-left: 0px; /*по умолчанию 16 пикселей = 1 рем, это если нет отцовского элемента или у того не задан размер шрифта*/
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    /*margin = со всех сторон сразу*/
+
+    /*colors (only for p:*/
+    color: rgb(172, 206, 32); /* color of text */
+    background-color: blueviolet; /* bg color (padding+context area) */
+}
