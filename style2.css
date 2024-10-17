@@ -1,0 +1,68 @@
+.gpt-tests {
+    font-size: 100px;
+}
+
+.registration-form .registration-form__input {
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+.registration-form .registration-form__submit {
+    color: white;
+    background-color: blue;
+}
+
+.product-card {
+    width: 300px;
+    height: 300px;
+}
+
+.product-card .product-card__image {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.product-card .product-card__title {
+    background-color: green;
+    color: white;
+}
+
+.nav__list .nav__link {
+    text-decoration: underline;
+}
+
+.blog-map .blog-map__header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.blog-map .blog-map__item-header {
+    font-size: 18px;
+}
+
+.blog-map .blog-map__item-date {
+    color: lightgray;
+}
+
+.user-card {
+    height: 200px;
+    width: 200px;
+}
+
+.user-card .user-card__avatar {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.user-card .user-card__username {
+    font-weight: 600;
+}
+
+.user-card .user-card__add-friend {
+    background-color: #ff0000;
+    color: white;
+}
