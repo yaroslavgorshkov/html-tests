@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+
 body {
     margin: 0px;
     font-size: 16px;
@@ -28,13 +45,47 @@ body {
 }
 
 .dad-box__child.dad-box__child--child1 {
-   
+   font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.dad-box__child.dad-box__child--child2 {
-   
+.otec {
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: ultra-condensed; /* ширина шрифта (как отдельный шрифт идет) */
+    font-variant: small-caps;
+    font-variant: normal; /* есть 2 вида - small-caps и normal. смол кепс делает все не заглавные буквы заглавными,
+    но того же маленького размера*/
+    line-height: 2;
 }
 
-.dad-box__child.dad-box__child--child3 {
-    
+.otec2{
+    color: green;
+    /* text-align:justify; */
+    text-align-last:right;
+    direction: rtl;
+    height: 200px;
+    vertical-align:sub;
+    line-height: 2;
+    text-decoration-line:overline underline line-through;
+    text-decoration-style: double;
+    text-decoration-color: black;
+    text-decoration-thickness: 10%;
+
+    text-transform:capitalize;
+
+    text-indent: 50px;
+    letter-spacing:10px;
+    word-spacing: 100px;
+
+    /* white-space: normal; */
+}
+
+.otec2 span {
+    vertical-align: text-bottom;
+    font-size: 0.5rem;
+    /* writing-mode: vertical-rl; */
 }
