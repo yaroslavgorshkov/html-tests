@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+body {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.dad-box {
+    box-sizing: border-box;
+    border: 5px solid red;
+    background-color: #77eb2b;
+    width: 700px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.dad-box__child {
+    background-color: #fff;
+    padding: 15px;
+    border: 1.2px solid rgb(156, 156, 196);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.dad-box__child.dad-box__child--child1 {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    flex-basis: 20%;
+
+}
+
+.dad-box__child.dad-box__child--child2 {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    align-self: flex-start;
+    flex-basis: 20%;
+}
+
+
+.otec {
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: ultra-condensed; /* ширина шрифта (как отдельный шрифт идет) */
+    font-variant: small-caps;
+    font-variant: normal; /* есть 2 вида - small-caps и normal. смол кепс делает все не заглавные буквы заглавными,
+    но того же маленького размера*/
+    line-height: 2;
+}
+
+.otec2{
+    color: green;
+    /* text-align:justify; */
+    text-align-last:right;
+    direction: rtl;
+    height: 200px;
+    vertical-align:sub;
+    line-height: 2;
+    text-decoration-line:overline underline line-through;
+    text-decoration-style: double;
+    text-decoration-color: black;
+    text-decoration-thickness: 10%;
+
+    text-transform:capitalize;
+
+    text-indent: 50px;
+    letter-spacing:10px;
+    word-spacing: 100px;
+
+    /* white-space: normal; */
+}
+
+.otec2 span {
+    vertical-align: text-bottom;
+    font-size: 0.5rem;
+    /* writing-mode: vertical-rl; */
+}
+
+
+/* -========================================-  Grid -=============================================- */
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(2, 100px auto);
+    grid-template-columns: minmax(100px, 200px) 100px; */
+    /* grid-template-columns: repeat(1, 500px) 1fr;
+    grid-auto-rows: 50px 100px;
+    grid-template-rows: repeat(1, 200px);
+    gap: 10px; */
+
+    /* grid-auto-columns: 66px 99px; */
+    /* grid-auto-flow: row; */
+
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    width: 500px;
+    height: 500px;
+    /* align-items: center;
+    justify-content: center; */
+    /* place-items:center center; */
+}
+
+.grid-container .grid-container__element {
+    background-color: rgba(165, 216, 68, 0.632);
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.grid-container .grid-container__element.grid-container__element--first{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.grid-container .grid-container__element.grid-container__element--big{
+    grid-column: span 5;
+    grid-row: span 2;
+
+    /*
+    grid-row-start + grid-row-end = grid-row
+    grid-column-start + grid-column-end = grid-column
+    grid-row + grid-column = grid-area (grs / gcs / gre / gce )
+    */
+    order: 1;
+}
+
+
+
+.grid-site-layout {
+    display: grid;
+    height: 50vh;
+    grid-template-columns: [one] 100px [two] 100px [three] 100px [four];
+    grid-template-rows: repeat(4, 25px);
+    /* gap: 10px 30px; */
+    grid-template-areas: 
+    "menu main ad"
+    "menu main ad"
+    "menu main ."
+    "menu about about"
+    ;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+}
+
+.grid-site-layout .grid-site-layout__menu {
+    grid-area: menu;
+    background-color: #6d7af0;
+    height: 100px;
+}
+
+
+.grid-site-layout .grid-site-layout__main {
+    grid-area: main;
+    background-color: #11ff25;
+    height: 75px;
+}
+
+
+.grid-site-layout .grid-site-layout__ad {
+    grid-area: ad;
+    background-color: #ff0000;
+    height: 50px;
+}
+
+
+.grid-site-layout .grid-site-layout__about {
+    grid-area: about;
+    background-color: #50016a;
+    height: 25px;
+}
