@@ -10,5 +10,345 @@
     <div class="border-test">
         Some text
     </div>
+    <div style="width: 500px;">
+        <div class="div1"> --- Position static. Top right bottom and left dont work. z-index too.
+             По всей длине род контейнера/документа</div>
+        <div class="div2">
+            <p> --- Position relative. U can change the position and z-index (with visual only)</p>
+            <p> --- Rarely used only with relative, usual with absolute child elements</p>
+            <p> --- In document stream</p>
+            <p> --- По всей длине род контейнера/документа</p>
+        </div>
+    </div>
+
+    <div class="div3">
+        <p> --- Position absolute. Top right bottom and left dont work. z-index too.</p>
+        <p> --- то есть если у элемента задано position: absolute, 
+            то он выходит из потока документа (элемент типа как забивает 
+            на  свое расположение в хтмл документе и располагается 
+            независимо от всех остальных), и теперь ему 
+            нужно относительно чего-то располагаться. то есть где-то
+            должен быть 0 координат для него. таким нулем координат 
+            становится ближайший родительский элемент с позишн не 
+            статик и не стики. если такой элемент находится, 
+            то 0 координат располагается в левом верхнем углу этого 
+            элемента, а если все родители статик или стики, то берется
+            за основу координат элемент body</p>
+        <p> --- Is not in document stream</p>
+        <p> --- Подстраивается по размеру под контент</p>
+        <p> --- Если у элемента с position: absolute не заданы left, top, right и bottom, 
+            он всё ещё вне потока и не влияет на расположение других элементов, но 
+            при этом позиционируется в порядке следования в HTML-коде — т.е., он 
+            появляется на странице сразу после предыдущего элемента в разметке, но 
+            не занимает места и может пересекаться с другими элементами.</p>
+    </div>
+    <!-- <div class="div4">
+        <p> --- Position fixed. Top right bottom and left dont work. z-index too.</p>
+        <p> --- Is not in document stream</p>
+        <p> --- Подстраивается по размеру под контент</p>
+        <p> --- Если у элемента с position: fixed не заданы left, top, right и bottom, 
+            он всё ещё вне потока и не влияет на расположение других элементов, но 
+            при этом позиционируется в порядке следования в HTML-коде — т.е., он 
+            появляется на странице сразу после предыдущего элемента в разметке, но 
+            не занимает места и может пересекаться с другими элементами.</p>
+        <p> --- Координатная сетка отнсительно левого верхнего угла окна браузера, всегда на одном и том же месте</p>
+    </div> -->
+    
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+    </div>
+
+    <div style="display: flex; column-gap: 10px;">
+        <div style="display: grid; grid-template-columns: repeat(2, 100px); grid-template-rows: repeat(2, 1000px); gap: 10px;">
+            <div style="background-color: blue;"></div>
+            <div style="background-color: blue;"></div>
+            <div style="background-color: blue;"></div>
+            <div style="background-color: blue;"></div>
+        </div>
+
+        <div style="position: sticky; top: 10px; background-color: #841616; height: 100px;">
+            <p> --- Position sticky. Top right bottom and left dont work. z-index too.</p>
+            <p> --- Подстраивается по размеру под всю ширину контент обл род контейнера</p>
+            <p> --- используется top </p>
+            <p> --- Входит в поток документа </p>
+        </div>
+    </div>
+
+    <div>
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit 
+        repellat exercitationem distinctio recusandae necessitatibus
+        praesentium fuga, error iusto. Rerum, maiores. Sequi quisquam 
+        distinctio dignissimos rerum temporibus a in assumenda eligendi?
+    </div>
+
+    <p style="font-size: 2rem;">Для абсолют или фиксед элемента можно задать все 4 свойства top bottom left right и тогда элемент растянется. но
+        это только если не заданы размеры width и height (по умолчанию фиксед и абсолют растягиваются по размеру контента). 
+        Растягиваться будет такой элемент по ближайшему не статическому родителю.
+    </p>
+    <div style="position: relative; height: 300px; width: 300px; background-color: blue;">
+        <div style="position: absolute; top: 10px; bottom: 10px; left: 10px; right: 10px; inset: 50px; background-color: green;"></div>
+    </div>
+
+    <p style="font-size: 2rem;"> z-index в контексте родителей: </p>
+    <div style="position: relative; background-color: #1aff00; width: 300px; height: 300px; z-index: 100;">
+        <div style="position: absolute; background-color: #ff0000; width: 300px; height: 300px; top: 150px; left: 150px; z-index: 200;"></div>
+    </div>
+
+    <div style="position: relative; background-color: #0044ff; width: 300px; height: 300px; z-index: 200;">
+        <div style="position: absolute; background-color: #fbff00; width: 300px; height: 300px; top: -100px; left: 100px; z-index: 250;"></div>
+    </div>
+
+    <p> з-индекс ребенка не может быть меньше з-индекса родителя</p>
+
+    <div style="position: static; background-color: #ffe100;">content</div>
+    <div style="position: static; background-color: #80cd2e;">content</div>
+    <div style="position: sticky; background-color: #ca0a0a; top: 10px;">content</div>
+    <div style="position: static; background-color: #fff;">content</div>
 </body>
 </html>

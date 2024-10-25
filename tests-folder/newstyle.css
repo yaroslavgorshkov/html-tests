@@ -1,4 +1,44 @@
 .border-test {
-    border-width: 10px;
-    border-style: dashed dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-top: 5px solid red;
+    border-right: 10px dotted green;
+    border-bottom: 7px double black;
+    border-left: 5px dashed yellow;
+
+    border-radius: 100px;
+}
+
+.div1 {
+    position: static;
+    background: green;
+}
+
+.div2 {
+    position: relative;
+    background: yellow;
+    left: 5px;
+    top: -5px;
+    z-index: -1;
+}
+
+.div3 {
+    position: absolute;
+    background: red;
+    left: 250px;
+    top: 250px;
+}
+
+.div4 {
+    position: fixed;
+    background: purple;
+    left: 150px;
+    top: 150px;
+}
+
+p {
+    margin: 0;
 }
