@@ -22,6 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 .products .product {
     display: flex;
     flex-direction: column;
+    position: relative;
+    align-items: center;
 }
 
 .products .product .product__img img {
@@ -47,4 +49,11 @@ h1, h2, h3, h4, h5, h6 {
 .products .product .product-wrapper .comments {
     display: flex;
     column-gap: 4px;
+}
+
+.products .product .product__code {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.5rem;
 }

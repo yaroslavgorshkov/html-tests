@@ -42,3 +42,57 @@
 p {
     margin: 0;
 }
+
+.bg-test-container {
+    border: 10px black solid;
+    background-color: rgba(100, 200, 120, 0.5);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA-zbscwCrVJTuiUgLgADfHz-kBUqOTTyVCQ&s);
+    width: 600px;
+    height: 600px;
+    background-size: 50%;
+    /* background-repeat: no-repeat; */
+    
+
+    background-position: left; /* первое - по оси у, далее по х */
+
+    /* background-attachment: fixed; */
+
+    /*
+    CONTAIN - вставляет одно изображение так, чтобы оно полностью вмещалось (подгоняя размеры под контейнер), а далее пустое
+    пространство заполняет такими же изображениями (или по ширине или по длине)
+    cover - вставояет одно избражение, подгоняя размеры, сохраняя пропорции, но обрезая в случае чего
+    */
+}
+
+td {
+    border: 5px solid black;
+}
+
+.test-img {
+    border: 5px solid black;
+    object-fit: fill; /* размер изображения подстраивается полностью под заданные размеры, и если нужно то сужается*/
+    /* width: 100px; height: 200px;  изображение сжимается, не обрезается aspect ration - соотношение сторон*/ 
+    object-fit:contain; /* изображение подстраивается , то есть заданные ей размеры полностью содержат (contain) само изображение
+    при этом остается пустое пространство; хотя де юре оно занято изображением, де факто его там нет*/
+    object-fit:cover;  /* изображение сохраняет свое соотношение сторон и заполняет все заданное ей пространство, 
+    при этом обрезается*/
+    object-fit:none; /* размер изображения не меняется, если width и height меньше, оно обрезается, если больше - располагается
+    в центре*/
+    object-fit:scale-down; /* ведёт себя как contain, если изображение больше контейнера. 
+    Однако, если изображение меньше контейнера, оно остаётся неизменным (как при object-fit: none) */
+
+    object-fit:none; 
+
+    object-position: 50% 50%;
+
+    width: 1300px;
+    height: 1400px;
+}
+
+.bd-test-2 {
+    width: 100px;
+    aspect-ratio: 2;
+    border-width: 5px 10px 15px 20px;
+    border-style: solid dashed dotted groove;
+    border-color: red green blue yellow;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="newstyle.css">
-    <title>Document</title>
+    <title>Border, Position etc</title>
 </head>
 <body>
     <div class="border-test">
@@ -12,7 +12,7 @@
     </div>
     <div style="width: 500px;">
         <div class="div1"> --- Position static. Top right bottom and left dont work. z-index too.
-             По всей длине род контейнера/документа</div>
+            По всей длине род контейнера/документа</div>
         <div class="div2">
             <p> --- Position relative. U can change the position and z-index (with visual only)</p>
             <p> --- Rarely used only with relative, usual with absolute child elements</p>
@@ -105,7 +105,9 @@
         distinctio dignissimos rerum temporibus a in assumenda eligendi?
     </div>
 
-    <div style="display: flex; column-gap: 10px;">
+    <div style="display: flex; column-gap: 10px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA-zbscwCrVJTuiUgLgADfHz-kBUqOTTyVCQ&s);
+    background-attachment: fixed;">
         <div style="display: grid; grid-template-columns: repeat(2, 100px); grid-template-rows: repeat(2, 1000px); gap: 10px;">
             <div style="background-color: blue;"></div>
             <div style="background-color: blue;"></div>
@@ -114,10 +116,11 @@
         </div>
 
         <div style="position: sticky; top: 10px; background-color: #841616; height: 100px;">
-            <p> --- Position sticky. Top right bottom and left dont work. z-index too.</p>
+            <p> --- Position sticky. Top right bottom and left work. z-index works.</p>
             <p> --- Подстраивается по размеру под всю ширину контент обл род контейнера</p>
             <p> --- используется top </p>
             <p> --- Входит в поток документа </p>
+            <p> --- u have too define the top property to make it works well</p>
         </div>
     </div>
 
@@ -350,5 +353,140 @@
     <div style="position: static; background-color: #80cd2e;">content</div>
     <div style="position: sticky; background-color: #ca0a0a; top: 10px;">content</div>
     <div style="position: static; background-color: #fff;">content</div>
+
+    <span style="background-color: #0044ff;">Span</span>
+    <div class="bg-test-container">Text</div>
+
+    <h3>Visibility ты НЕ можешь взаимодействовать с невидимым (он вообще пропадает)</h3>
+    <div style="width: 100px; height: 100px; visibility: visible; background-color: #ff0000;">Div1</div>
+    <div style="width: 100px; height: 100px; visibility: hidden; background-color: #fed002;">Div2</div>
+    <div style="width: 100px; height: 100px; visibility: visible; background-color: #20ff07;">Div3</div>
+
+    <table style="border: 5px solid black;">
+        <tr>
+            <td style="visibility: collapse;">first1</td>
+            <td>first2</td>
+        </tr>
+        <tr>
+            <td>second1</td>
+            <td style="visibility: collapse;" >second2</td>
+        <tr>
+            <td style="visibility: collapse;">third1</td>
+            <td>third2</td>
+        </tr>
+    </table>
+
+    <h3>Opacity ты можешь взаимодействовать с невидимым</h3> 
+    <div style="background-color: rgba(0, 254, 148, 0.5);">
+        Some text from div1
+        <div style="opacity: inherit; border: #00e908 solid 3px;">
+            Some text from div2
+            <div style="opacity: inherit; border: #ff0a0a solid 3px;">
+                Some text from div3
+            </div>
+        </div>
+    </div>
+    difference
+    <div style="opacity: 0.4;">
+        Some text from div1
+        <div style="opacity: inherit; border: #00e908 solid 3px;">
+            Some text from div2
+            <div style="opacity: inherit; border: #ff0a0a solid 3px;">
+                Some text from div3
+            </div>
+        </div>
+    </div>
+
+    <h3>Overflow</h3>
+    <div style="background-color: #ffe600;
+                width: 300px;
+                height: 300px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                /* overflow-wrap:break-word; */
+                ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Voluptate, explicabo non recusandae porro nostrum, autem necessitatsitatibusneceecessitatibusitatibusneceecessitatibuibusneceecessitatibus, ea sapi
+         ente nobis ut itaque voluptatem necessitatibusnecessitatibusnecessitatibus natus rerum perferendis quisquam enim nam verit
+         atis. Tempora, tempore ex culpa expedita laboriosam obcaecati quis? Odio, quae v
+         oluptate culpa eius corrupti veritatis facere quaerat optio animi sit qui molesti
+         as repellat reprehenderit autem quidem praesentium temporibus similique. Asperior
+         es saepe voluptates quos soluta molestias perferendis voluptatem modi eligendi inv
+         entore mollitia amet dignissimos enim necessitatibus assumenda quis nostrum accusa
+         ntium, reprehenderit possimus quam doloribus debitis explicabo! Possimus, ipsum bl
+         anditiis officia at magnam quae excepturi dolore temporibus unde architecto qui cor
+         rupti perspiciatis quasi!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Voluptate, explicabo non recusandae porro nostrum, autem necessitatibus, ea sapi
+         ente nobis ut itaque voluptatem natus rerum perferendis quisquam enim nam verit
+         atis. Tempora, tempore ex culpa expedita laboriosam obcaecati quis? Odio, quae v
+         oluptate culpa eius corrupti veritatis facere quaerat optio animi sit qui molesti
+         as repellat reprehenderit autem quidem praesentium temporibus similique. Asperior
+         es saepe voluptates quos soluta molestias perferendis voluptatem modi eligendi inv
+         entore mollitia amet dignissimos enim necessitatibus assumenda quis nostrum accusa
+         ntium, reprehenderit possimus quam doloribus debitis explicabo! Possimus, ipsum bl
+         anditiis officia at magnam quae excepturi dolore temporibus unde architecto qui cor
+         rupti perspiciatis quasi!
+        </div>
+        <p style="font-size: 2rem;">reprehenderit autem quidem praesentium temporibus similique. Asperior
+            es saepe voluptates quos soluta molestias perferendis voluptatem modi eligendi inv
+            entore mollitia amet dignissimos enim necessitatibus assumenda quis nostrum accusa
+            ntium, reprehenderit possimus quam doloribus debitis explicabo! Possimus, ipsum bl
+            anditiis officia at magnam quae excepturi dolore temporibus unde architecto qui cor
+            rupti perspiciatis quasi!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptate, explicabo non recusandae porro nostrum, autem necessitatibus, ea sapi
+            ente nobis ut itaque voluptatem natus rerum perferendis quisquam enim nam verit
+            atis. Tempora, tempore ex culpa expedita laboriosam obcaecati quis? Odio, quae v
+            oluptate culpa eius corrupti veritatis facere quaerat optio animi sit qui molesti
+            as repellat reprehenderit autem quidem praesentium temporibus similique. Asperior
+            es saepe voluptates quos soluta molestias perferendis voluptatem modi eligendi inv
+            entore mollitia amet dignissimos enim necessitatibus assumenda quis nostrum accusa
+            ntium, reprehenderit possimus quam doloribus </p>
+
+    <img class="test-img" src="https://t3.ftcdn.net/jpg/05/25/34/26/360_F_525342688_YpazmzBtzsWd3QmuVMMviGfCEdiL7KZP.jpg" alt="400">
+    <div class="bd-test-2">
+        Test
+    </div>
+
+    <!-- <div style="position: fixed; width: 100px; height: 100px; background-color: #1aff00; bottom: 0; right: 0;">
+        <div style="position: absolute; width: 10px; height: 10px; background-color: #ff0000; right: 50%; bottom: 50%;">
+        
+        </div>
+    </div> -->
+
+    <div style="width: 100px; height: auto; background-color: #c13131; line-height: 100px;">
+        tet
+    </div>
+
+    <div style="width: 100%; height: 100px; overflow: auto; background-color: #c8ff03; border: 5px solid black;">
+        <div style="position: sticky; height: 30px; background-color: #8c9277; border: 5px solid black; top:30px; z-index: 1;">
+            Im tooooo sticky yeah!
+        </div>
+        <p style="position: relative; z-index: 2;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Esse iste praesentium, ipsum accusantium dolores temporibus
+         molestias consequatur eveniet, culpa sit quas, aperiam sint
+        repellendus nemo fugiat. Debitis accusantium autem fugiat p
+        erferendis aspernatur adipisci necessitatibus harum digniss
+        imos dolores numquam, iste neque quisquam fugit sed saepe e
+        sse ipsum omnis animi sint optio? Voluptatum, nesciunt, err
+        or magni dignissimos deleniti quibusdam ullam id minus nece
+        ssitatibus, velit provident. Perspiciatis quam officiis sus
+        cipit eos ut deleniti provident incidunt obcaecati, labore 
+        repellendus libero optio qui ab eaque quaerat cumque quibus
+        dam voluptatibus recusandae! Tempora molestiae illo officii
+        s dolores consequuntur incidunt autem ipsam corrupti archit
+        ecto dolor, adipisci maxime libero? Lorem ipsum dolor sit, 
+         molestias consequatur eveniet, culpa sit quas, aperiam sint
+        repellendus nemo fugiat. Debitis accusantium autem fugiat p
+        erferendis aspernatur adipisci necessitatibus harum digniss
+        imos dolores numquam, iste neque quisquam fugit sed saepe e
+        sse ipsum omnis animi sint optio? Voluptatum, nesciunt, err
+        or magni dignissimos deleniti quibusdam ullam id minus nece
+        ssitatibus, velit provident. Perspiciatis quam officiis sus
+        cipit eos ut deleniti provident incidunt obcaecati, labore 
+        repellendus libero optio qui ab eaque quaerat cumque quibus
+        dam voluptatibus recusandae! Tempora molestiae illo officii
+        s dolores consequuntur incidunt autem ipsam corrupti archit
+        ecto dolor, adipisci maxime libero? </p>
+    </div>  
 </body>
 </html>
