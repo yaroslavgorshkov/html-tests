@@ -123,6 +123,7 @@ div.ps-el::first-letter {
 }
 
 .asp-rat {
+    width: 100px;
     background-color: #00686b;
     /* height: 100px; */
     aspect-ratio: 2;
