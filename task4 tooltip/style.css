@@ -1,23 +1,31 @@
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.best-products {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2px;
+    justify-content: center;
 }
 
 .product {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    max-height: 500px;
+    max-width: 260px;
     width: 100%;
-    height: 100%;
     border: 2px solid gray;
-
     position: relative;
-    margin: 20px;
 }
 
 .product .product__img {
-    
     padding: 40px 40px 0px 40px;
 }
 
@@ -45,8 +53,6 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
-    text-decoration: none;
-    color: rgb(41, 41, 41);
 }
 
 .product .product__rating-discussion-wrapper .product__discussion a{
@@ -72,14 +78,101 @@ body {
     max-height: 36px;
 }
 
-.product .product__benefit-tooltip {
+.product .product__benefit-tooltip-wrapper {
     width: 100%;
     max-width: 50px;
     position: absolute;
     top: 10px;
     left: 10px;
+    z-index: 200;
+}
+
+.product .product__benefit-tooltip-wrapper .product__benefit-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.product .product__benefit-tooltip-wrapper .product__benefit-tooltip .product__benefit-tooltip-content {
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    visibility: hidden;
+    width: 500px;
+    background-color: rgb(239, 239, 239);
+    border: 2px solid gray;
+    font-size: 0.8rem;
+
+    top: 0;
+    left: 125%;
+}
+
+.product .product__benefit-tooltip-wrapper .product__benefit-tooltip .product__benefit-tooltip-content::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent gray transparent transparent;
+
+    left: -2px;
+    top: -2px;
+    transform: translateX(-100%);
+}
+
+.product .product__benefit-tooltip-wrapper .product__benefit-tooltip:hover .product__benefit-tooltip-content {
+    visibility: visible;
 }
 
 .product .product__benefit-tooltip img{
     width: 100%;
+}
+
+.product .product__compare-tooltip-wrapper {
+    position: absolute;
+    width: 100%;
+    max-width: 50px;
+    height: 100%;
+    max-height: 50px;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+
+    border-radius: 50%;
+    border: 4px solid gray;
+}
+
+.product .product__compare-tooltip-wrapper .product__compare-tooltip{
+    position: relative;
+    cursor: pointer;
+}
+
+.product .product__compare-tooltip-wrapper .product__compare-tooltip .product__compare-tooltip-content  {
+    position: absolute;
+    visibility: hidden;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.product .product__compare-tooltip-wrapper .product__compare-tooltip .product__compare-tooltip-content::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent rgb(0, 0, 0);
+
+    left: 50%;
+    top: 0;
+    translate: -50% -100%;
+}
+
+.product .product__compare-tooltip-wrapper .product__compare-tooltip:hover .product__compare-tooltip-content  {
+    visibility: visible;
 }
