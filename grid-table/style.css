@@ -1,0 +1,69 @@
+html {
+    height: 100dvh;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    background-color: #ebebeb;
+    margin: 0;
+}
+
+.grid-table-container {
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px;
+}
+
+.grid-table-container .grid-table {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 6px solid #137934;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-table-container .grid-table .grid-table__item {
+    padding: 10px 0 10px 20px;
+}
+
+.grid-table-container .grid-table .grid-table__item:nth-child(8n+1),
+.grid-table-container .grid-table .grid-table__item:nth-child(8n+2),
+.grid-table-container .grid-table .grid-table__item:nth-child(8n+3),
+.grid-table-container .grid-table .grid-table__item:nth-child(8n+4) {
+    background-color: #f2f2f2;
+    border-top: 2px solid #d4d4d4;
+    border-bottom: 2px solid #d4d4d4;
+    color: #137934;
+}
+
+.grid-table-container .grid-table .grid-table__item.grid-table__item--first-row {
+    background-color: #137934;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+}
+
+.grid-table-container .grid-table .grid-table__item.grid-table__item--last-row {
+    border-top: 2px solid #d4d4d4;
+    border-bottom: 0;
+}
+
+.grid-table-container .grid-table .grid-table__item.grid-table__item--first-left {
+    border-radius: 10px 0 0 0;
+}
+
+.grid-table-container .grid-table .grid-table__item.grid-table__item--first-right {
+    border-radius: 0 10px 0 0;
+}
+
+.grid-table-container .grid-table .grid-table__item:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
