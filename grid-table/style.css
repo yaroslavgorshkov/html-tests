@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     position: relative;
-    background-color: #ebebeb;
+    background-color: #fff0f0;
     margin: 0;
 }
 
@@ -23,44 +23,41 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
 
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-table-container .grid-table .grid-table__row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-table-container .grid-table .grid-table__row.grid-table__row--first-row {
+    border: 0 !important;
+    font-weight: 600 !important;
+    border-radius: 10px 10px 0 0 !important;
+    background-color: #137934 !important;
+}
+
+.grid-table-container .grid-table .grid-table__row.grid-table__row--first-row .grid-table__item {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
 }
 
 .grid-table-container .grid-table .grid-table__item {
     padding: 10px 0 10px 20px;
-    background-color: #fff;
+    border-top: 2px solid #d4d4d4;
 }
 
-.grid-table-container .grid-table .grid-table__item:nth-child(8n+1),
-.grid-table-container .grid-table .grid-table__item:nth-child(8n+2),
-.grid-table-container .grid-table .grid-table__item:nth-child(8n+3),
-.grid-table-container .grid-table .grid-table__item:nth-child(8n+4) {
-    background-color: #f2f2f2;
-    border-top: 2px solid #d4d4d4;
-    border-bottom: 2px solid #d4d4d4;
+.grid-table-container .grid-table .grid-table__row:nth-child(odd) {
+    background-color: #e8e8e8;
     color: #137934;
 }
 
-.grid-table-container .grid-table .grid-table__item.grid-table__item--first-row {
-    background-color: #137934;
-    border: 0;
-    color: #fff;
-    font-weight: 600;
-}
-
-.grid-table-container .grid-table .grid-table__item.grid-table__item--last-row {
-    border-top: 2px solid #d4d4d4;
-    border-bottom: 0;
-}
-
-.grid-table-container .grid-table .grid-table__item.grid-table__item--first-left {
-    border-radius: 10px 0 0 0;
-}
-
-.grid-table-container .grid-table .grid-table__item.grid-table__item--first-right {
-    border-radius: 0 10px 0 0;
+.grid-table-container .grid-table .grid-table__row:nth-child(even) {
+    background-color: #fff;
+    color: #000000;
 }
 
 .grid-table-container .grid-table .grid-table__item:hover {
