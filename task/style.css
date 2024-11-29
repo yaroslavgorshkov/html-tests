@@ -1,0 +1,29 @@
+.input-container {
+    max-width: 300px;
+}
+
+.input-container .password-input {
+    width: calc(100% - 40px);
+}
+
+.input-container .password-input input{
+    border-bottom: 2px solid black;
+    outline: 0;
+}
+
+.outl-1 {
+    background-color: aqua;
+    width: 90%;
+    padding: 10px;
+    border: 10px solid gray;
+    outline: 10px solid yellow;
+}
+
+.outl-2 {
+    background-color: rgb(119, 255, 0);
+    width: 90%;
+    padding: 10px;
+    border: 10px solid rgb(255, 107, 107);
+    outline: 10px solid rgb(0, 183, 255);
+    outline-offset: 10px;
+}
