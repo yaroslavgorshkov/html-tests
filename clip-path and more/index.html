@@ -51,6 +51,50 @@
             75%{background-color: #b5b5b5; top: 100px; left: 0;}
             100% {background-color: #00e1ff; left: 0; top: 0;}
         }
+
+        .p-animated {
+            margin-top: 100px;
+        }
+
+        .p-animated svg{
+            position: relative;
+            left: 0;
+            fill: #000;
+            transition: all 1s ease;
+        }
+
+        .p-animated:hover svg{
+            left: 100px;
+            fill: #00ff2f;
+        }
+
+        .a-animated {
+            display: block;
+            position: relative;
+            color: #000;
+            transition: color 1s ease;
+            margin-bottom: 100px;
+            margin-top: 100px;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .a-animated:hover {
+            color: #2e612f;
+        }
+        
+        .a-animated div{
+            position: absolute;
+            top: 100%;
+            height: 1px;
+            width: 0%;
+            background-color: #2e612f;
+            transition: width 1s ease;
+        }
+
+        .a-animated:hover div{
+            width: 100%;
+        }
     </style>
 </head>
 <body style="height: 100dvh;">
@@ -76,7 +120,7 @@
     <div class="clp-cont" style="clip-path: url(#my-clip-path); background-color: #000; color: aqua;">
         Text text
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><clipPath id="my-clip-path" d="M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q66 0 113-47t47-113q0-66-47-113t-113-47H280q-66 0-113 47t-47 113q0 66 47 113t113 47Zm400-40q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM480-480Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="current"><clipPath id="my-clip-path" d="M280-240q-100 0-170-70T40-480q0-100 70-170t170-70h400q100 0 170 70t70 170q0 100-70 170t-170 70H280Zm0-80h400q66 0 113-47t47-113q0-66-47-113t-113-47H280q-66 0-113 47t-47 113q0 66 47 113t113 47Zm400-40q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM480-480Z"/></svg>
 
     <button style="pointer-events: none; user-select: text;">
         Text button1 - cant click, can select text
@@ -148,6 +192,19 @@
     </div>
 
     <div class="animated-square"></div>
+    <div style="position: relative;">
+        <button style="position: absolute; top: 0; width: 100px; height: 30px; left: 0;">1</button>
+        <button style="position: absolute; top: 0; width: 100px; height: 30px; left: 50px; pointer-events: none;">2</button>
+    </div>
+    <p class="p-animated">
+        text
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+    </p>
+
+    <a href="" class="a-animated">
+        Text Text Text Text Text
+        <div></div>
+    </a>
 </body>
 </html>
 
