@@ -1,0 +1,153 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.body-imitation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-imitation-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    background-color: rgb(107, 215, 65);
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    margin: 20px;
+    z-index: 100;
+}
+
+.modal  .modal__img {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modal  .modal__img svg{
+    width: 100%;
+}
+
+.modal .modal__content {
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 60%;
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.modal .modal__content h2{
+    font-size: 1.6rem;
+}
+
+.modal .modal__content .modal__content-input-form {
+    color: rgb(142, 142, 142);
+    margin-bottom: 10px;
+}
+
+.modal .modal__content .modal__content-input-form input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid rgb(197, 197, 197);
+}
+
+.modal .modal__content .modal__content-input-form .modal__content-button-wrapper {
+    margin-top: 10px;
+}
+
+.modal .modal__content .modal__content-input-form .modal__content-button {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    opacity: 0.2;        
+}
+
+.modal .modal__content .modal__content-input-form .modal__content-button.modal__content-button--sms {
+    background-color: rgb(107, 215, 65);
+    color: white;
+}
+
+.modal .modal__content .modal__content-input-form .modal__content-button.modal__content-button--call {
+   color: rgb(107, 215, 65);
+   background-color: white;
+}
+
+.modal .modal__content .modal__content-or-section {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 25fr 10fr 25fr;
+    column-gap: 10px;
+}
+
+.modal .modal__content .modal__content-or-section span{
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.modal .modal__content .modal__content-or-section hr{
+    border: 1px solid rgb(193, 193, 193);
+    width: 100%;
+}
+
+.modal .modal__content .modal__content-sign-in {
+    margin-top: 30px;
+    padding: 12px;
+    border: 2px solid rgb(209, 209, 209);
+    border-radius: 4px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 30px 1fr;
+}
+
+.modal .modal__content .modal__content-sign-in img {
+    height: 30px;
+    width: 30px;
+}
+
+.modal .modal__content .modal__content-sign-in span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal__control {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 2rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 200;
+}
