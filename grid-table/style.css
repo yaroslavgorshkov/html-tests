@@ -1,0 +1,66 @@
+html {
+    height: 100dvh;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    background-color: #fff0f0;
+    margin: 0;
+}
+
+.grid-table-container {
+    position: absolute;
+    width: calc(100% - 20px);
+    max-width: 600px;
+    margin: 10px;
+}
+
+.grid-table-container .grid-table {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 6px solid #137934;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-table-container .grid-table .grid-table__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-table-container .grid-table .grid-table__row.grid-table__row--first-row {
+    border: 0 !important;
+    font-weight: 600 !important;
+    border-radius: 10px 10px 0 0 !important;
+    background-color: #137934 !important;
+}
+
+.grid-table-container .grid-table .grid-table__row.grid-table__row--first-row .grid-table__item {
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+}
+
+.grid-table-container .grid-table .grid-table__item {
+    padding: 10px 0 10px 20px;
+    border-top: 2px solid #d4d4d4;
+}
+
+.grid-table-container .grid-table .grid-table__row:nth-child(odd) {
+    background-color: #e8e8e8;
+    color: #137934;
+}
+
+.grid-table-container .grid-table .grid-table__row:nth-child(even) {
+    background-color: #fff;
+    color: #000000;
+}
+
+.grid-table-container .grid-table .grid-table__item:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
