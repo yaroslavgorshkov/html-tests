@@ -1,4 +1,2 @@
-# html-tests
-repo for testing html
-
-+new2
+# responsive layout task 2
+repo for responsive layout task 2
